@@ -1,0 +1,12 @@
+SET SERVEROUTPUT ON;
+ACCEPT VAR_A NUMBER PROMPT 'Enter a value to which you need to multiply';
+ACCEPT VAR_B NUMBER PROMPT 'Enter a number';
+DECLARE
+A NUMBER := 1;
+B NUMBER := '&VAR_B';
+BEGIN
+WHILE A <= '&VAR_A' LOOP
+DBMS_OUTPUT.PUT_LINE(B || ' ' || 'X' || ' ' || A || ' ' || '=' || ' ' ||B*A);
+A :=A+1;
+END LOOP;
+END;
